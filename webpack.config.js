@@ -1,4 +1,5 @@
-const path = require('path');
+import path from 'path';
+
 export default function (webpackConfig, env) {
   const svgDirs = [
     require.resolve('antd-mobile').replace(/warn\.js$/, ''), // 1. 属于 antd-mobile 内置 svg 文件
