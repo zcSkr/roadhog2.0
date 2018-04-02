@@ -1,0 +1,68 @@
+.picker {
+  width: 100%;
+}
+
+.picker .tabs {
+  // height: 0.3rem;
+}
+
+.picker .items {
+  height: 2.5rem;
+  padding: 0.05rem 0.15rem;
+  overflow-y: auto;
+}
+
+.picker .items .item {
+  position: relative;
+  font-size: 0.14rem;
+  line-height: 0.32rem;
+  height: 0.32rem;
+}
+
+.picker .items .item:after {
+  clear: both;
+}
+
+.picker .items .selected {
+  color: #dd5044;
+}
+
+.picker .icon {
+  position: absolute;
+  top: 50%;
+  left: -0.15rem;
+  transform: translateY(-50%);
+}
+
+.sidebar {
+  background-color: #fff;
+  position: relative;
+}
+
+.sidebar .header {
+  position: relative;
+  font-size: 0.14rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+
+.sidebar .header .icon {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.08rem;
+  font-size: 0.16rem;
+}
+
+:global {
+  .sys-area-picker .am-list-item {
+    z-index: 1;
+  }
+  .sys-area-picker .am-drawer {
+    position: fixed;
+  }
+  .sys-area-picker .am-list-item .am-list-line .am-list-extra {
+    -ms-flex-preferred-size: 56%;
+    -webkit-flex-basis: 56%;
+  }
+}

@@ -1,0 +1,165 @@
+.normal {
+  color: #333;
+}
+
+.userZone {
+  position: relative;
+  background: #f37d0f;
+  background-size: auto 100%;
+  padding: 0.16rem 0;
+}
+
+.userZone .user {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: start;
+}
+
+.userZone .user .img {
+  margin: 0 0.08rem 0 0.16rem;
+  width: 0.48rem;
+  min-width: 0.48rem;
+  height: 0.48rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 0.01rem solid rgba(255, 255, 255, .4);
+}
+
+.userZone .user .img img {
+  width: 100%;
+}
+
+.userZone .name {
+  color: #fff;
+  font-size: 0.12rem;
+}
+
+.userZone .name p {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  margin-bottom: 0.04rem;
+}
+
+.userZone .name p span {
+  margin-right: 0.08rem;
+  font-size: 0.14rem;
+}
+
+.userZone .name .account {
+  opacity: .6;
+}
+.userZone .verification {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 6%;
+  bottom: 0.29rem;
+  color: #fff;
+  font-size: 0.14rem;
+  .text {
+    font-size: 0.14rem;
+  }
+}
+
+
+.fortuneZone,
+.orderZone {
+  background: #fff;
+}
+
+.fortuneZone .all,
+.orderZone .all {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  padding-right: 0.28rem;
+  height: 0.4rem;
+  border-bottom: 0.01rem solid rgba(0, 0, 0, .15);
+  position: relative;
+  color: rgba(0, 0, 0, .54);
+}
+
+.fortuneZone .all cite,
+.orderZone .all cite {
+  font-size: 0.14rem;
+  padding: 0 0 0 0.16rem;
+  color: rgba(0, 0, 0, .87);
+}
+
+.fortuneZone .all .more,
+.orderZone .all .more {
+  font-size: 0.12rem;
+}
+
+.fortuneZone .all .more:after,
+.orderZone .all .more:after {
+  content: "";
+  position: absolute;
+  right: 0.16rem;
+  top: 50%;
+  width: 0.07rem;
+  height: 0.07rem;
+  border-left: 0.01rem solid currentColor;
+  border-top: 0.01rem solid currentColor;
+  transform: translate3d(0, -50%, 0) rotateZ(135deg);
+  -webkit-transform: translate3d(0, -50%, 0) rotateZ(135deg);
+}
+
+.orderZone .item .icon {
+  width: 0.24rem;
+  height: 0.24rem;
+  margin: 0 auto 0.08rem;
+}
+
+.fortuneZone .nav,
+.orderZone .nav {
+  display: -webkit-box;
+  -webkit-box-align: stretch;
+  -webkit-box-pack: justify;
+  padding: 0 0.4rem;
+}
+
+.fortuneZone .nav li,
+.orderZone .nav li {
+  display: -webkit-box;
+  -webkit-box-align: stretch;
+  -webkit-box-pack: justify;
+  text-align: center;
+  font-size: 0.12rem;
+  color: rgba(0, 0, 0, .87);
+}
+
+.fortuneZone .nav .item,
+.orderZone .nav .item {
+  padding: 0.2rem 0;
+  position: relative;
+  display: block;
+}
+
+.fortuneZone .item .icon {
+  height: 0.24rem;
+  margin: 0 auto 0.08rem;
+}
+
+.fortuneZone,
+.itemsZone {
+  margin-top: 0.08rem;
+}
+
+:global {
+  .mycenter .am-list-body {
+    border-top: none;
+    border-bottom: none;
+  }
+  .mycenter .am-list-body:after {
+    border-bottom: none;
+  }
+  .mycenter .am-list-item .am-list-line .am-list-content {
+    font-size: 0.14rem;
+  }
+  .mycenter .am-list-item .am-list-line .am-list-extra {
+    font-size: 0.12rem;
+  }
+}

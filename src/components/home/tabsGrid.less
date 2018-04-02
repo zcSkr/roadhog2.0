@@ -1,0 +1,45 @@
+.tabs_content {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  box-sizing: border-box;
+  &>div {
+    width: 50%;
+    box-sizing: border-box;
+    border-bottom: 0.01rem solid #ddd;
+    border-right: 0.01rem solid #ddd;
+    padding: 0.15rem;
+  }
+  &>div:nth-child(even) {
+    border-right: 0;
+  }
+
+
+  .cube {
+    &>div {
+      text-align: center;
+      margin: 5% 0;
+      font-size: 0.13rem;
+    }
+    .picture {
+      width: 100%;
+      margin: 0;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .countdown,
+    .price {
+      color: #d10004;
+      font-size: 0.20rem;
+    }
+    .btn {
+      color: #fff;
+      border-radius: 0.5rem;
+      height: 0.3rem;
+      line-height: 0.3rem; 
+      // background: #d10004;
+    }
+  }
+}
