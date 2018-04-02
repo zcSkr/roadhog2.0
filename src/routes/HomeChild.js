@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 import styles from './home.less';
-import { Button, Modal, Flex } from 'antd-mobile';
+import { Button, Modal, Flex, InputItem } from 'antd-mobile';
 
 
 function closest(el, selector) {
@@ -48,7 +48,7 @@ export default class HomeChild extends Component {
     }
   }
   handleModal = (action) => {
-    this.setState({modalVisible: action == "show"})
+    this.setState({ modalVisible: action == "show" })
   }
   onWrapTouchStart = (e) => {
     // fix touch to scroll background page on iOS
@@ -61,6 +61,10 @@ export default class HomeChild extends Component {
     }
   }
 
+  handleChange = (action, data) => {
+    // this.setState({})
+    console.log(action, data)
+  }
   render() {
     const { style } = this.props
     return (
@@ -82,11 +86,21 @@ export default class HomeChild extends Component {
           wrapProps={{ onTouchStart: this.onWrapTouchStart }}
         >
           <Flex align='center' className={styles.flexItem}>
-            <Flex.Item style={{flex: 4}}><input placeholder='验证码' type="number" className={styles.verifyInput} /></Flex.Item>
-            <Flex.Item style={{flex: 3}}><Button style={{minWidth: 97}} inline size='small'>发送验证码</Button></Flex.Item>
+            <Flex.Item style={{ flex: 4 }}><input placeholder='验证码' type="number" className={styles.verifyInput} /></Flex.Item>
+            <Flex.Item style={{ flex: 3 }}><Button style={{ minWidth: 97 }} inline size='small'>发送验证码</Button></Flex.Item>
           </Flex>
         </Modal>
 
+        <InputItem
+          placeholder="请填写您的身份证号码"
+          type="text"
+          pattern="[8-9]*" 
+          maxLength="18"
+          disabled={false}
+          // value={this.state.value}
+          onChange={this.handleChange.bind(this, "idcard")}>
+          身份证号码
+          </InputItem>
       </div>
     );
   }
