@@ -101,12 +101,6 @@ class AreaPicker extends Component {
   }
 }
 
-AreaPicker.propTypes = {
-  sys_areaPicker: PropTypes.object,
-  location: PropTypes.object,
-  dispatch: PropTypes.func,
-};
-
 
 function mapStateToProps({ sys_areaPicker }) {
   return { sys_areaPicker };

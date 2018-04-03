@@ -3,7 +3,7 @@ import fetch from 'dva/fetch';
 // import qs from 'qs';
 // import moment from 'moment';
 import { handleErrorCode, handleRequestError } from "./error.js";
-const { rootUrl, platformNo, getToken } = require("config/app").default;
+import app from "config/app";
 
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
@@ -19,7 +19,7 @@ function handleUrl(url) {
   //传入_p 
   // url += "&" + qs.stringify(params); 
   if (url.substr(0, 4) !== 'http')
-    url = rootUrl + url;
+    url = app.rootUrl + url;
   return url;
 }
 
@@ -53,13 +53,13 @@ function handleUrl(url) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
-  var token = getToken();
+  var token = app.getToken();
   // var auth = (!!authentication);
   let finalUrl = handleUrl(url);
   const opts = { ...options };
   opts.headers = {
     ...opts.headers,
-    _p: platformNo,
+    _p: app.platformNo,
     // _a: auth,
     _t: token || '', //cookie.get('token')
     // _r: location.pathname + location.search + location.hash, //微信验证通过跳转

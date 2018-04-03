@@ -1,4 +1,4 @@
-import app from "../config/app";
+import app from "config/app";
 
 export function config(data) {
   window.wx.config({

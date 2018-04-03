@@ -8,8 +8,6 @@ import styles from './serviceCenter.less';
 import TopBar from 'components/servicecenter/TopBar';
 import ServiceCenter from 'components/servicecenter/ServiceCenter';
 
-import { baseRoute, homeRoute } from "config/app";
-
 
 function ServiceCenterPage({
   dispatch,
@@ -56,12 +54,6 @@ function ServiceCenterPage({
     </div>
   );
 }
-
-ServiceCenterPage.propTypes = {
-  center_servicecenter: PropTypes.object,
-  location: PropTypes.object,
-  dispatch: PropTypes.func,
-};
 
 
 function mapStateToProps({ center_servicecenter }) {

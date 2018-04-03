@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { WhiteSpace, WingBlank, List, InputItem, Button } from 'antd-mobile';
 
-import { rectangleLogo } from '../../config/app';
+import app from 'config/app';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class LoginForm extends Component {
         <WhiteSpace size="md" />
         <WingBlank size='md'>
           <div style={{textAlign:'center'}}>
-            <img src={rectangleLogo} />
+            <img src={app.rectangleLogo} />
           </div>
           <InputItem value={this.state.userName} onChange={this.onFieldChange.bind(this, "userName")}
             placeholder="用户名或手机号" clear>用户名</InputItem>
@@ -46,10 +46,6 @@ class LoginForm extends Component {
   }
 }
 
-LoginForm.propTypes = {
-  onOk: PropTypes.func,
-  loading: PropTypes.bool,
-};
 LoginForm.defaultProps = {
   loading: false,
 };

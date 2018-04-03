@@ -28,10 +28,6 @@ function LoginPage({
   );
 }
 
-LoginPage.propTypes = {
-  sys_login: PropTypes.object,
-};
-
 
 function mapStateToProps({ sys_login }) {
   return { sys_login };

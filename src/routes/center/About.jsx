@@ -8,7 +8,7 @@ import styles from './about.less';
 import About from 'components/about/About';
 import TopBar from 'components/about/TopBar';
 
-import { baseRoute, homeRoute } from "config/app";
+import app from "config/app";
 
 const AboutPage = ({
   dispatch,
@@ -18,7 +18,7 @@ const AboutPage = ({
     if (btn == 'back') {
       dispatch(routerRedux.goBack());
     } else if (btn == "suggest") {
-      dispatch(routerRedux.push(baseRoute + "/commentform?type=system"));
+      dispatch(routerRedux.push(app.baseRoute + "/commentform?type=system"));
     }
   };
 

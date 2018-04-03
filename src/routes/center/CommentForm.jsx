@@ -8,8 +8,6 @@ import styles from './commentForm.less';
 import TopBar from 'components/member/commentform/TopBar'; 
 import Form from 'components/member/commentform/Form';
 
-import { baseRoute, loginRoute, getCurrentUnionuser } from "config/app";
-
 function CommentForm({
   dispatch,
   location,
@@ -67,11 +65,6 @@ function CommentForm({
   );
 }
 
-CommentForm.propTypes = {
-  center_commentform: PropTypes.object,
-  location: PropTypes.object,
-  dispatch: PropTypes.func,
-};
 
 function mapStateToProps({ center_commentform }) {
   return { center_commentform };

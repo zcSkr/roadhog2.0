@@ -3,7 +3,6 @@ import { connect } from 'dva';
 import styles from './home.less';
 import { Button, Modal, Flex, InputItem } from 'antd-mobile';
 
-
 function closest(el, selector) {
   const matchesSelector = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
   while (el) {
@@ -27,7 +26,6 @@ export default class HomeChild extends Component {
       modalVisible: false,
     };
   }
-
 
   onClick = () => {
 
